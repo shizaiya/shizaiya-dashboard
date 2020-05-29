@@ -1,0 +1,10 @@
+<% if @user.nil? %>
+    <p style="color: red">User is not exist.</p>
+<% else %>
+<p>
+Name: <%= @user.name %><br>
+Email: <%= @user.email %><br>
+Logo: <%= @user.logo_pass %><br>
+Discord: <%= @user.discord_uid %><br>
+</p>
+<% end%>

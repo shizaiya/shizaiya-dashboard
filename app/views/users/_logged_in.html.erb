@@ -1,1 +1,4 @@
 <h2>Logged in!</h2>
+<%= link_to "My profile", user_show_path(current_user.public_uid) %>
+<%= link_to "User list", user_list_path() %>
+<%= link_to "Logout", logout_path, method: :delete %>

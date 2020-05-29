@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_28_073009) do
+ActiveRecord::Schema.define(version: 2020_05_28_124017) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2020_05_28_073009) do
     t.integer "discord_uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "public_uid"
+    t.index ["public_uid"], name: "index_users_on_public_uid", unique: true
   end
 
 end

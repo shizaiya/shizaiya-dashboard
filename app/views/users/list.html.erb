@@ -1,0 +1,7 @@
+<% @users.each do |user| %>
+Name: <%= user.name %><br>
+Email: <%= user.email %><br>
+Logo: <%= user.logo_pass %><br>
+Discord: <%= user.discord_uid %><br>
+<%= link_to "Info", user_show_path(user.public_uid) %><br><br>
+<% end %>
